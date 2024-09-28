@@ -1,0 +1,304 @@
+
+header {
+  background: linear-gradient(to right, #a2e0ff, #e4f3fe,#ffffff);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px; /* adjust the height to your liking */
+}
+.brand {
+  color: #000000; /* white text */
+  font-size: 1.5em; /* make the brand text larger */
+  margin-right: 20px; /* add some space between brand and nav */
+}
+
+.brand i {
+  font-size: 1.2em; /* make the icon slightly smaller than the text */
+  margin-right: 10px; /* add some space between icon and text */
+}
+
+nav {
+  display: flex; /* make the nav links a flex container */
+  justify-content: space-between; /* space out the nav links */
+}
+
+nav a {
+  color: #000000; /* white text */
+  text-decoration: none; /* remove underline */
+  margin: 0 20px; /* add some space between nav links */
+  transition: color 0.2s ease; /* add a transition effect */
+}
+
+nav a:hover {
+  color: #ccc; /* light gray on hover */
+}
+
+nav a.active {
+  color: #66d9ef; /* light blue for active link */
+}
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.quote-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.quote cite {
+  font-size: 18px;
+  font-style: italic;
+  color: #000000;
+}
+
+
+
+
+
+
+.Playlist {
+  text-align: center;
+  margin: 40px auto; /* add some margin to create space around the playlist */
+  width: 50%;
+  background-color: #fff; /* white background for the playlist */
+  padding: 20px; /* add some padding to create space inside the playlist */
+  border: 1px solid #ddd; /* add a light gray border */
+  border-radius: 10px; /* add a rounded corner effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
+}
+.Playlist h2 {
+  font-weight: bold;
+  color: #333; /* dark gray text color */
+  margin-top: 0; /* remove default margin top */
+}
+  .Playlist p {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+  }
+
+
+        
+      .slide blockquote {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          font-size: 22px;
+          color: #fff;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      
+      .slide cite {
+          font-size: 16px;
+          color: #ccc;
+      }
+      .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .section-title {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+
+
+.controls button:hover {
+  background-color: #45a049;
+}
+    .playlist {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px 0;
+    }
+    .playlist-item {
+        flex: 0 0 auto;
+        width: 150px;
+        margin-right: 20px;
+        text-align: center;
+    }
+    .playlist-item img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .playlist-item p {
+        margin: 10px 0 0;
+        font-size: 14px;
+    }
+    .playlist-item span {
+        font-size: 12px;
+        color: #666;
+    }
+    .arrow {
+        font-size: 24px;
+        color: #666;
+        cursor: pointer;
+        user-select: none;
+    }
+    .arrow-left {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .arrow-right {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .container {
+      padding: 20px;
+  }
+  .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  .section-title h2 {
+      font-size: 24px;
+      margin: 0;
+  }
+  .section-title a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+  }
+  .artists, .albums {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .artist, .album {
+      margin-right: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  .artist img, .album img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+  }
+  .album img {
+      border-radius: 8px;
+      width: 150px;
+      height: 150px;
+  }
+  .artist p, .album p {
+      margin: 10px 0 0;
+      font-size: 14px;
+  }
+  .artist span, .album span {
+      color: #b3b3b3;
+      font-size: 12px;
+  }
+  .artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .artist {
+    margin: 10px;
+    width: 120px;
+  }
+  
+  .artist:nth-child(n+6) {
+    display: none; /* hide all artists beyond the 5th one */
+  }
+  
+  .show-all {
+    display: flex !important; /* show all artists when show-all class is added */
+  }
+   
+  .album {
+    display: none; /* hide all albums initially */
+  }
+  
+  .album.show {
+    display: block; /* show albums with class "show" */
+  }
+  
+  .albums {
+    max-height: 600px; /* set a max height to hide excess albums */
+    overflow-y: hidden; /* hide excess albums */
+  }
+    /* Add arrow icons for navigation */
+    .arrow {
+      font-size: 24px;
+      color: #666;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .arrow-left {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .arrow-right {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .Playlist {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .section-title {
+      margin-bottom: 20px;
+    }
+    
+    .album {
+      display: inline-block;
+      margin: 10px;
+      width: 150px;
+    }
+    
+    .album img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    .album p {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+    }

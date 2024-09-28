@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <i class="fa fa-music"></i>
+      <span>Listener</span>
+    </div>
+  </header>
+  <section class="Home">
+    <div class="image-slider">
+      <img id="slide-img" src="bg.jpg" alt="Image 1" style="width: 100%; height: 100vh; object-fit: cover; ">
+      <div class="quote-container">
+        <div class="quote" id="quote-1">
+          <p>"Music is the divine way to tell beautiful,<br> poetic things to the heart."</p>
+          <cite>- Pablo Casals</cite>
+        </div>
+        <div class="quote" id="quote-2">
+          <p>"Where words fail, music speaks."</p>
+          <cite>- Hans Christian Andersen</cite>
+        </div>
+        <div class="quote" id="quote-3">
+          <p>"Music is the universal language of mankind."</p>
+          <cite>- Henry Wadsworth Longfellow</cite>
+        </div>
+      </div>
+    </div>
+    <style>
+      .quote-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+      }
+  
+      .quote {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease, transform 1s ease;
+        transform: translateX(100%); /* Initially off-screen */
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+      }
+  
+      .visible {
+        opacity: 1;
+        transform: translateX(0); /* Move to the visible position */
+      }
+    </style>
+  
+    <script>
+      const quotes = document.querySelectorAll(".quote");
+      let currentQuote = 0;
+  
+      function changeQuote() {
+        // Remove visible class from all quotes
+        quotes.forEach(quote => {
+          quote.classList.remove("visible");
+          quote.style.transform = "translateX(100%)"; // Reset position to off-screen
+        });
+  
+        // Add visible class to the current quote
+        const current = quotes[currentQuote];
+        current.classList.add("visible");
+  
+        // Move to the next quote
+        currentQuote = (currentQuote + 1) % quotes.length;
+      }
+  
+      // Start the slideshow
+      setInterval(changeQuote, 5000); // Change every 5 seconds
+  
+      // Initially show the first quote
+      changeQuote();
+    </script>
+  </section>
+  
+  </section>
+  <div class="Playlist">
+    <h2>Music Player</h2>
+      Music is the literature of the heart; it commences where speech ends.
+    
+  </div>
+  <section class="Playlist">
+    <class class="container">
+      <div class="section-title">
+       <h2>
+        Popular artists
+       </h2>
+       <a href="#" id="showAllArtists">Show all</a>
+      </div>
+      <div class="artists" id="artists">
+       <div class="artist">
+        <img alt="Pritam" height="120" src="album/Pritam.jpg" width="120"/>
+        <p>
+         Pritam
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="A.R. Rahman" height="120" src="album/AR-Rahman.jpg" width="120"/>
+        <p>
+         A.R. Rahman
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Neha Kakkar" height="120" src="album/Neha.jpg" width="120"/>
+        <p>
+         Neha Kakkar
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Shreya Ghoshal" height="120" src="album/Shreya Ghoshal.jpg" width="120"/>
+        <p>
+          Shreya Ghoshal
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Sachin-Jigar" height="120" src="album/Sachin-Jigar.jpg" width="120"/>
+        <p>
+         Sachin-Jigar
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Arijit Singh" height="120" src="album/Arijit Singh.jpg" width="120"/>
+        <p>
+         Arijit Singh
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Jonita Gandhi" height="120" src="album/Jonita Gandhi.jpeg" width="120"/>
+        <p>
+          Jonita Gandhi
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Anuradha Paudwal" height="120" src="album/Anuradha Paudwal.jpg" width="120"/>
+        <p>
+          Anuradha Paudwal
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Anirudh Ravichander" height="120" src="album/Anirudh Ravichander.jpg" width="120"/>
+        <p>
+         Anirudh Ravichander
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Atif Aslam" height="120" src="album/Atif Aslam.jpg" width="120"/>
+        <p>
+         Atif Aslam
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Lata Mangeshkar" height="120" src="album/Lata Mangeshkar.jpg" width="120"/>
+        <p>
+          Lata Mangeshkar
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Alka Yagnik" height="120" src="album/Alka Yagnik.jpg" width="120"/>
+        <p>
+          Alka Yagnik
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Vishal Mishra" height="120" src="album/Vishal Mishra.jpg" width="120"/>
+        <p>
+         Vishal Mishra
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Neeti Mohan" height="120" src="album/Neeti Mohan.jpeg" width="120"/>
+        <p>
+          Neeti Mohan
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+       <div class="artist">
+        <img alt="Armann-Malik" height="120" src="album/Armann-Malik.jpg" width="120"/>
+        <p>
+          Armann-Malik
+        </p>
+        <span>
+         Artist
+        </span>
+       </div>
+      </div>
+      <script>
+        
+        const showAllArtists = document.getElementById('showAllArtists');
+const artists = document.querySelectorAll('.artist');
+
+showAllArtists.addEventListener('click', function(event) {
+  event.preventDefault();
+  artists.forEach(artist => {
+    artist.style.display = 'block'; // show all artists
+  });
+});
+
+let showAll = false;
+
+showAllArtists.addEventListener('click', function(event) {
+  event.preventDefault();
+  artists.forEach((artist, index) => {
+    if (showAll) {
+      if (index >= 5) {
+        artist.style.display = 'none'; // hide all artists beyond the 5th one
+      }
+    } else {
+      artist.style.display = 'block'; // show all artists
+    }
+  });
+  showAll = !showAll; // toggle the showAll flag
+});
+      </script>
+
+    </class>
+    </section>
+    <section class="Playlist">
+      <div class="container">
+        <div class="section-title">
+          <h2>Popular albums</h2>
+          <a href="#" id="showAllAlbums">Show all</a>
+        </div>
+        <div class="albums" id="albums">
+          <div class="album">
+            <img alt="Jaan Ban Gaye" height="150" src="album/Jaan Ban Gaye.jpg" width="150"/>
+            <p>Jaan Ban Gaye</p>
+          </div>
+          <div class="album">
+            <img alt="Aashiqui 2" height="150" src="album/Aashiqui 2.jpg" width="150"/>
+            <p>Aashiqui 2</p>
+          </div>
+          <div class="album">
+            <img alt="Dil Maang Raha Hai" height="150" src="album/Dil Maang Raha Hai.jpg" width="150"/>
+            <p>Dil Maang Raha Hai</p>
+          </div>
+          <div class="album">
+            <img alt="Aaj Ki Raat (From" height="150" src="album/aaj ki raat.jpg" width="150"/>
+            <p>Aaj Ki Raat</p>
+          </div>
+          <div class="album">
+            <img alt="Suna Hai" height="150" src="album/Suna Hai.jpg" width="150"/>
+            <p>Suna Hai</p>
+          </div>
+          <div class="album">
+            <img alt="Yeh Jawaani Hai" src="album/Yeh Jawaani Hai.jpg" width="150"/>
+            <p>Yeh Jawaani Hai</p>
+          </div>
+          <div class="album">
+            <img alt="ABCD" height="150" src="album/ABCD.jpg" width="150"/>
+            <p>ABCD</p>
+          </div>
+          <div class="album">
+            <img alt="Vaaste" height="150" src="album/Vaaste.jpg" width="150"/>
+            <p>Vaaste</p>
+          </div>
+          <div class="album">
+            <img alt="Kasam Khake Kaho" height="150" src="album/Kasam Khake Kaho.jpg" width="150"/>
+            <p>Kasam Khake Kaho</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      const showAllAlbums = document.getElementById('showAllAlbums');
+      const albums = document.querySelectorAll('.album');
+    
+      // initially hide all albums beyond the 4th one
+      albums.forEach((album, index) => {
+        if (index >= 3) {
+          album.style.display = 'none'; // hide all albums beyond the 4th one
+        }
+      });
+    
+      let show_All = false;
+    
+      showAllAlbums.addEventListener('click', function(event) {
+        event.preventDefault();
+        albums.forEach((album) => {
+          if (show_All) {
+            if (album.style.display === 'block') {
+              album.style.display = 'none'; // hide all albums
+            }
+          } else {
+            album.style.display = 'block'; // show all albums
+          }
+        });
+        show_All = !show_All; // toggle the showAll flag
+      });
+  const audioPlayer = document.createElement('audio'); // create an audio element
+
+  albums.forEach((album) => {
+    album.addEventListener('click', (event) => {
+      const albumTitle = event.target.querySelector('p').textContent; // get the album title
+      playSong(albumTitle); // play the song
+    });
+  });
+
+  function playSong(albumTitle) {
+    // assume you have a function to get the song URL based on the album title
+    const songUrl = getSongUrl(albumTitle);
+    audioPlayer.src = songUrl;
+    audioPlayer.play();
+  }
+
+  function getSongUrl(albumTitle) {
+    // implement this function to return the song URL based on the album title
+    // for example:
+    switch (albumTitle) {
+      case 'Jaan Ban Gaye':
+        return 'songs/Jaan Ban Gaye.mp3';
+      case 'Aashiqui 2':
+        return 'songs/Aashiqui 2.mp3';
+      // ...
+      default:
+        return ''; // return an empty string if no song is found
+    }
+  }
+    </script>
+ 
+</body>
+</html>
